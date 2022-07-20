@@ -25,7 +25,7 @@ function drawBox_r(x,y,xs,ys,l) {
 function onConnect() {}
 function onUpdate() {
     t += 1;
-    if (t == 30) {
+    if (t == 120) {
         clearScreen();
         t = 0;
         let o = 0;

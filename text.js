@@ -44,12 +44,21 @@ function mode_to_str(mode) {
 function onInput(key) {
 
     lastKey = key.toString();
+    let data_updated = false;
     if (key == 8 && text_buffer.length > 0) {
         text_buffer = text_buffer.substring(0, text_buffer.length - 1);
-        saveData(text_buffer);
+        data_updated = true;
     }
-    else if ((key >= 32 && key < 127 || key == 10)/*&& text_buffer.length < 49*/) {
+    else if ((key >= 32 && key < 127)/*&& text_buffer.length < 49*/) {
         text_buffer = text_buffer + String.fromCharCode(key);
+        data_updated = true;
+    }
+    else if (key == 10) {
+        data_updated = true;
+        text_buffer = text_buffer + " " + eval(text_buffer);
+    }
+
+    if (data_updated) {
         saveData(text_buffer);
     }
 }
