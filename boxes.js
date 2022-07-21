@@ -11,8 +11,7 @@ function drawBox_r(x,y,xs,ys,l) {
     let size = Math.min(xs,ys);
     if (size>=6 && Math.random()>0.2) {
         let os = o-1;
-        if (xs>ys == Math.random()>0.1)
-        {
+        if (xs>ys == Math.random()>0.1) {
             drawBox_r(n_x,       n_y,Math.floor(n_xs/2),n_ys,l);
             drawBox_r(Math.floor(n_x+n_xs/2)+os,n_y,Math.ceil(n_xs/2)-os,n_ys,l);
         }
