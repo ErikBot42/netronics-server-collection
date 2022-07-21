@@ -2,6 +2,10 @@
 a set of Netronics servers for the game Last Call BBS.
 
 ## Images
+Interactive mandelbrot
+![image](https://user-images.githubusercontent.com/86044772/180272486-b8af0f80-7845-444d-8b56-336db23b329c.png)
+
+
 Stars
 ![image](https://user-images.githubusercontent.com/63870842/180007619-59e37f2f-b0b8-47fd-8c6e-e54a3ea0507d.png)
 
