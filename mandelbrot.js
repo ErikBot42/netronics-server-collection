@@ -1,3 +1,14 @@
+let redraw = 0;
+let firstConnect = 1;
+
+function getName() {
+	return "Mandelbrot";
+}
+
+function onConnect() {
+	return;
+}
+
 /*
  * 17  up
  * 18  down
@@ -16,11 +27,9 @@ let CxOffset     = 2.2;
 let CyOffset     = 1.5;
 let burning      = false;
 
-let firstConnect = 1;
-let redraw       = 0
 function onUpdate() {
 	if (firstConnect)
-		drawText("Press any key to next.",17,0,4);
+		drawText("Press any key to next.",17,(56/2)-10,20/2);
 
 	if (redraw) {
 		clearScreen();
@@ -54,8 +63,9 @@ function onUpdate() {
 
 	drawText(zoom,5,0,0);
 	drawText(CxOffset,5,0,1);
-	drawText(CyOffset,5,0,2);
-	drawText(burning,5,0,3);
+	drawText(CyOffset,5,5,1);
+	drawText("BRN: ",5,0,2);
+	drawText(burning,5,4,2);
 }
 
 function onInput(key) {
@@ -79,12 +89,4 @@ function onInput(key) {
 		CxOffset += 0.1;
 	if (key == 20) /* right */
 		CxOffset -= 0.1;
-}
-
-function getName() {
-	return "Mandelbrot";
-}
-
-function onConnect() {
-	return;
 }
